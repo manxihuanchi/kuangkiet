@@ -1,0 +1,34 @@
+package com.kuangkie.device.fg.item;
+public class DeployConfigHGVBE6828Item {
+    public static final String 部署配置_基本属性组="hgvb6829";
+    public static final String 基本属性组_accessKeyId="hgvb6830";
+    public static final String 基本属性组_accessKeySecret="hgvb6831";
+    public static final String 基本属性组_internetSlbId="hgvb6832";
+    public static final String 基本属性组_上线appid="hgvb6833";
+    public static final String 基本属性组_上线访问地址="hgvb6834";
+    public static final String 基本属性组_上线端口="hgvb6835";
+    public static final String 基本属性组_测试appid="hgvb6836";
+    public static final String 基本属性组_测试访问地址="hgvb6837";
+    public static final String 基本属性组_测试端口="hgvb6838";
+    public static final String 基本属性组_上线版本编码="hgvb6839";
+    public static final String 基本属性组_测试版本编码="hgvb6840";
+    public static final String 基本属性组_部署模式="hgvb6848";
+    public static final String 基本属性组_上线版本号="hgvb6849";
+    public static final String 基本属性组_测试版本号="hgvb6850";
+    public static final String 基本属性组_上线库Url="hgvb6855";
+    public static final String 基本属性组_上线库驱动="hgvb6856";
+    public static final String 基本属性组_上线库用户名="hgvb6857";
+    public static final String 基本属性组_上线库密码="hgvb6858";
+    public static final String 基本属性组_测试库url="hgvb6859";
+    public static final String 基本属性组_测试库驱动="hgvb6860";
+    public static final String 基本属性组_测试库用户名="hgvb6861";
+    public static final String 基本属性组_测试库密码="hgvb6862";
+    public static final String 部署配置_cae配置="hgvb6889";
+    public static final String cae配置_应用id="hgvb6891";
+    public static final String cae配置_环境id="hgvb6892";
+    public static final String cae配置_项目code="hgvb6893";
+    public static final String cae配置_上线组件id="hgvb6894";
+    public static final String cae配置_测试组件id="hgvb6895";
+    public static final String cae配置_ak="hgvb6896";
+    public static final String cae配置_sk="hgvb6897";
+}
