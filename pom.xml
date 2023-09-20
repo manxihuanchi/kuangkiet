@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>com.kuangkie</groupId>
 			<artifactId>kuangkie</artifactId>
-			<version>0.0.21</version>
+			<version>0.0.22</version>
 		</dependency>
 	
 		<dependency>

@@ -30,12 +30,26 @@ import com.kuangkie.hydrogenv2.algorithm.Serverless;
 @Component
 public class SaeServerless implements Serverless{
 	 Logger logger = LoggerFactory.getLogger(SaeServerless.class);
-
+	 
 	@Override
-	public void publish(ImproveResultFactory improveResultFactory,	String jarName, String jarPath) {
+	public void publish(ImproveResultFactory improveResultFactory,	
+			String jarName, String jarPath, FGRecord deployConfig) {
 		ProRecordOpsBuilder currentProRecordOpsBuilder = improveResultFactory.getCurrentProRecordOpsBuilder();
+		
+		String accessKeyId = deployConfig.getString(DeployConfigHGVBE6828Item.基本属性组_accessKeyId);
+		if (accessKeyId == null || StringUtils.isBlank(accessKeyId)) {
+			improveResultFactory.addRefuseMessage(BaseConstant.TYPE_模板元数据, "请在【部署配置】填写accessKeyId！");
+			return;
+		}
+		
+		String accessKeySecret = deployConfig.getString(DeployConfigHGVBE6828Item.基本属性组_accessKeySecret);
+		if (accessKeySecret == null || StringUtils.isBlank(accessKeySecret)) {
+			improveResultFactory.addRefuseMessage(BaseConstant.TYPE_模板元数据, "请在【部署配置】填写accessKeySecret！");
+			return;
+		}
+		
 		// 上传jar 到oss
-		OssClient ossClient = new OssClient();
+		OssClient ossClient = new OssClient(accessKeyId, accessKeySecret);
 		String url = ossClient.uploading(jarName, jarPath);
 		if (url == null) {
 			improveResultFactory.addRefuseMessage(BaseConstant.TYPE_模板元数据, "上传失败！");

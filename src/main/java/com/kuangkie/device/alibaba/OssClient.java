@@ -13,15 +13,13 @@ import java.io.File;
  * @author lhb
  */
 public class OssClient {
-		  private final static String accessKeyId = "LTAI5t7jE7cCpGmxay7fQTJi";
-		  private final static String accessKeySecret = "2zVcAQRzVll0fQHfLn60LmVl10QLVZ";
 		  // Endpoint以华东1（杭州）为例，其它Region请按实际情况填写。
 	        String endpoint = "https://oss-cn-hangzhou.aliyuncs.com";
 	        String bucketName = "saeweb";
 	        
 	        private  OSS ossClient;
 	        
-	        public OssClient() {
+	        public OssClient(String accessKeyId, String accessKeySecret) {
 	        	 // 从环境变量中获取访问凭证。运行本代码示例之前，请确保已设置环境变量OSS_ACCESS_KEY_ID和OSS_ACCESS_KEY_SECRET。
 		        DefaultCredentialProvider credentialsProvider = CredentialsProviderFactory.newDefaultCredentialProvider(accessKeyId, accessKeySecret);
 		        // 填写Bucket名称，例如examplebucket。
@@ -34,7 +32,10 @@ public class OssClient {
 	        }
 	        
 	        public static void main(String[] args) {
-				OssClient ossClient = new OssClient();
+				String accessKeyId = null;
+				String accessKeySecret = null;
+				
+				OssClient ossClient = new OssClient(accessKeyId, accessKeySecret);
 				  String ossFileName = "aa.txt";
 			      String filePath= "C:\\Users\\chuyin\\Desktop\\basejar\\aa.txt";
 				String url = ossClient.uploading(ossFileName, filePath);
