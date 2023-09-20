@@ -41,9 +41,9 @@
 		<dependency>
 			<groupId>com.kuangkie</groupId>
 			<artifactId>kuangkie</artifactId>
-			<version>0.0.22</version>
+			<version>0.0.25</version>
 		</dependency>
-	
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
