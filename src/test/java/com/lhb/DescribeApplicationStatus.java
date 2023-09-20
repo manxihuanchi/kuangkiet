@@ -8,8 +8,8 @@ import com.aliyun.tea.*;
  *
  */
 public class DescribeApplicationStatus {
-	 private final static String accessKeyId = "LTAI5t7jE7cCpGmxay7fQTJi";
-	  private final static String accessKeySecret = "2zVcAQRzVll0fQHfLn60LmVl10QLVZ";
+	 private final static String accessKeyId = "xxx";
+	  private final static String accessKeySecret = "xxx";
 
 	    /**
 	     * 	使用AK&SK初始化账号Client
