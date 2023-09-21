@@ -279,7 +279,7 @@ public class SaeServerless implements Serverless{
 		boolean flag = saeClient.checkApp(appId);
 		if (flag) {
 			try {
-				Thread.sleep(8000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -287,7 +287,7 @@ public class SaeServerless implements Serverless{
 			// 绑定SLB 公网地址
 			SLBClient slbClient = new SLBClient();
 			
-			boolean bindSlb = slbClient.bindSlb(appId, internetSlbId, port);
+			boolean bindSlb = slbClient.bindSlb(appId, internetSlbId, port, accessKeyId, accessKeySecret);
 			
 			if (bindSlb) {
 				logger.info("绑定执行中 ！");

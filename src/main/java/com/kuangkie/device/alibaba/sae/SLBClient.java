@@ -8,9 +8,6 @@ import com.aliyun.tea.*;
  *
  */
 public class SLBClient {
-	private final static String accessKeyId = "LTAI5t7jE7cCpGmxay7fQTJi";
-	  private final static String accessKeySecret = "2zVcAQRzVll0fQHfLn60LmVl10QLVZ";
-
 	    /**
 	     * 使用AK&SK初始化账号Client
 	     * @param accessKeyId
@@ -28,8 +25,8 @@ public class SLBClient {
 	        config.endpoint = "sae.cn-hangzhou.aliyuncs.com";
 	        return new com.aliyun.sae20190506.Client(config);
 	    }
-
-	    public boolean bindSlb(String appId, String internetSlbId, String port) {
+	    
+	    public boolean bindSlb(String appId, String internetSlbId, String port, String accessKeyId, String accessKeySecret) {
 	    	 try {
 	    	// 请确保代码运行环境设置了环境变量 ALIBABA_CLOUD_ACCESS_KEY_ID 和 ALIBABA_CLOUD_ACCESS_KEY_SECRET。
 	        // 工程代码泄露可能会导致 AccessKey 泄露，并威胁账号下所有资源的安全性。以下代码示例使用环境变量获取 AccessKey 的方式进行调用，仅供参考，建议使用更安全的 STS 方式，更多鉴权访问方式请参见：https://help.aliyun.com/document_detail/378657.html
